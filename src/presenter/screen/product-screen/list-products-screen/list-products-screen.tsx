@@ -1,7 +1,10 @@
+import { CartProvider } from "../../../../services/store/cart-store";
+import { ProductList } from "./product-list";
+
 export function ListProductsScreen() {
   return (
-    <div>
-      <div>ListProductsScreen</div>
-    </div>
+    <CartProvider>
+      <ProductList />
+    </CartProvider>
   );
 }
