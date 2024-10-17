@@ -18,8 +18,6 @@ export const TodoProvider = ({ children }: { children: ReactNode }) => {
 
   const values = {
     todos,
-    createTodo: setTodos,
-    removeTodo: setTodos,
     updateTodos: setTodos,
   };
 

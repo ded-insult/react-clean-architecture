@@ -18,7 +18,7 @@ export const useTodo = () => {
     todo.updateTodos(updated);
   };
 
-  const create = (title: TodoTitle = "bebera") => {
+  const create = (title: TodoTitle) => {
     const updated = createTask(todos, title);
 
     todo.updateTodos(updated);

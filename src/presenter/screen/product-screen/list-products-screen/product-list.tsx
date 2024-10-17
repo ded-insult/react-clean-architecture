@@ -1,4 +1,3 @@
-import { useCart } from "../../../../application/use-cart";
 import { Product } from "../../../../domain";
 import { AddToCartAction } from "./product-actions";
 import { ProductItem } from "./product-item";
@@ -19,9 +18,6 @@ const products: Product[] = [
 ];
 
 export function ProductList() {
-  const cart = useCart();
-
-  console.log(cart);
   return (
     <div>
       {products.map((product) => (

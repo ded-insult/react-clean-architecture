@@ -4,6 +4,7 @@ import { useCartStorage } from "../services/adapters/cart-adapter";
 
 export const useCart = () => {
   const cart = useCartStorage();
+
   const { cart: productCart } = cart;
 
   const add = (product: Product) => {

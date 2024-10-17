@@ -1,10 +1,8 @@
 import { Cart } from "../domain/cart";
-import { TodoId, TodoTask, TodoTitle } from "../domain/todo";
+import { TodoTask } from "../domain/todo";
 
 export interface TodoTaskService {
   todos: TodoTask[];
-  createTodo(todos: TodoTask[], taskTitle: TodoTitle): void;
-  removeTodo(todos: TodoTask[], id: TodoId): void;
   updateTodos(todos: TodoTask[]): void;
 }
 

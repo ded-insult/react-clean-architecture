@@ -3,6 +3,7 @@ import { Product } from "../../../../domain";
 
 export const AddToCartAction = ({ product }: { product: Product }) => {
   const cart = useCart();
+  const addHandler = () => cart.add(product);
 
-  return <button onClick={() => cart.add(product)}>Добавить в корзину</button>;
+  return <button onClick={addHandler}>Добавить в корзину</button>;
 };
