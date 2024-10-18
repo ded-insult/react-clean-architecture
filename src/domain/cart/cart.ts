@@ -10,7 +10,7 @@ export const addToCart = (cart: Cart, product: Product): Cart => {
   if (isExisting !== -1) {
     const updated = cart.products.map((product, index) =>
       index === isExisting
-        ? { ...product, quanity: (product.quanity || 1) + 1 }
+        ? { ...product, quantity: (product.quantity || 1) + 1 }
         : product
     );
 

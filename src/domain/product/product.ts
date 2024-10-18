@@ -4,14 +4,14 @@ import { Ingredient } from "./ingredient";
 export interface Product {
   name: string;
   price: number;
-  quanity?: number;
+  quantity?: number;
   ingredient: Ingredient[];
   id: string | number;
 }
 
 export const totalProductsPrice = (cart: Cart) => {
   return cart.products.reduce(
-    (total, { price, quanity }) => total + price * (quanity || 1),
+    (total, { price, quantity }) => total + price * (quantity || 1),
     0
   );
 };

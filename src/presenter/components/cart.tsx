@@ -40,7 +40,7 @@ const CartItem = ({ product }: { product: Product }) => {
       <div>Имя товара: {product.name}</div>
       <div>Цена {product.price}</div>
       <div>Ингредиенты: {ingredientsMarkup}</div>
-      <div>Количество:{product.quanity || 1}</div>
+      <div>Количество:{product.quantity || 1}</div>
     </div>
   );
 };
