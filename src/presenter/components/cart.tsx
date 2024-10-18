@@ -14,7 +14,7 @@ export function Cart() {
 
   return (
     <div>
-      {cart.cart.products.map((product) => (
+      {products.map((product) => (
         <CartItem key={product.id} product={product} />
       ))}
 
@@ -25,7 +25,9 @@ export function Cart() {
 }
 
 const CartItem = ({ product }: { product: Product }) => {
-  const ingredientsMarkup = product.ingredient.map((ingredient, idx) =>
+  const { ingredient, name, price, quantity } = product;
+
+  const ingredients = ingredient.map((ingredient, idx) =>
     !isLastIndex(product.ingredient.length - 1, idx)
       ? `${ingredient},`
       : ingredient
@@ -37,10 +39,10 @@ const CartItem = ({ product }: { product: Product }) => {
         border: "1px solid red",
       }}
     >
-      <div>Имя товара: {product.name}</div>
-      <div>Цена {product.price}</div>
-      <div>Ингредиенты: {ingredientsMarkup}</div>
-      <div>Количество:{product.quantity || 1}</div>
+      <div>Имя товара: {name}</div>
+      <div>Цена {price}</div>
+      <div>Ингредиенты: {ingredients}</div>
+      <div>Количество:{quantity || 1}</div>
     </div>
   );
 };

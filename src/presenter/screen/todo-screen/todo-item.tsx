@@ -12,13 +12,7 @@ export function TodoItem(todo: TodoItemProps) {
   return (
     <div>
       <p>Название: {todoItem.title}</p>
-      <div
-        style={{
-          display: "felx",
-        }}
-      >
-        <p>Статус: {todoStatus(todoItem.complete)}</p>
-      </div>
+      <p>Статус: {todoStatus(todoItem.complete)}</p>
       <p>Айди: {todoItem.id}</p>
 
       {actions}
